@@ -1,0 +1,68 @@
+# Unity iOS Build Settings for The Invisible Hand
+# These settings should be configured in Unity Editor
+
+## iOS Player Settings
+Company Name: InvisibleHandGames
+Product Name: The Invisible Hand
+Bundle Identifier: com.invisiblehandgames.theinvisiblehand
+Version: 0.1.0
+Build Number: 1
+
+## Target SDK
+Minimum iOS Version: 13.0
+Target iOS Version: 17.0
+Target Device: Universal (iPhone + iPad)
+
+## Architecture
+Architecture: ARM64
+Scripting Backend: IL2CPP
+
+## Graphics
+Graphics API: Metal
+Color Space: Linear
+Auto Graphics API: Yes
+
+## Rendering
+Rendering Path: Universal Render Pipeline (URP) recommended for mobile
+Static Batching: Yes
+Dynamic Batching: Yes
+GPU Skinning: Yes
+
+## Optimization
+Script Call Optimization: Fast but no Exceptions
+Stripping Level: Medium
+Managed Stripping Level: Medium
+
+## Orientation
+Default Orientation: Auto Rotation
+Allowed Orientations:
+  - Portrait
+  - Portrait Upside Down
+  - Landscape Left
+  - Landscape Right
+
+## Status Bar
+Status Bar Hidden: No
+Status Bar Style: Default
+
+## Capabilities Needed
+- None (for basic version)
+- In-App Purchases (for future monetization)
+- Push Notifications (for market alerts - future)
+
+## Icons & Splash
+App Icon: Required (1024x1024 for App Store)
+Launch Screen: Unity Default or Custom
+
+## Build Path
+iOS Build Output: Builds/iOS/
+
+## Code Signing
+Automatically Sign: Yes (for development)
+Signing Team ID: [YOUR_TEAM_ID]
+
+## Notes
+- This game uses Unity 2022.3 LTS
+- No external SDKs required for basic version
+- All UI uses TextMeshPro
+- Tested on iPhone SE (3rd gen) and iPad Pro

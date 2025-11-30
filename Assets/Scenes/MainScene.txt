@@ -1,0 +1,122 @@
+# Main Scene Setup Instructions
+# This file describes how to set up the main scene in Unity
+
+## Scene Hierarchy
+
+### Core Systems (Don't Destroy On Load)
+1. GameManager (Empty GameObject)
+   - Add Component: GameManager.cs
+
+2. MarketEconomy (Empty GameObject)
+   - Add Component: MarketEconomy.cs
+
+3. EventManager (Empty GameObject)
+   - Add Component: EventManager.cs
+
+4. ProgressionManager (Empty GameObject)
+   - Add Component: ProgressionManager.cs
+
+### Player Systems
+5. PlayerInventory (Empty GameObject)
+   - Add Component: PlayerInventory.cs
+
+6. PlayerShop (Empty GameObject)
+   - Add Component: PlayerShop.cs
+
+### NPC Systems
+7. CustomerSpawner (Empty GameObject)
+   - Add Component: CustomerSpawner.cs
+   - Assign spawn point transform
+
+### Tutorial
+8. TutorialManager (Empty GameObject)
+   - Add Component: TutorialManager.cs
+
+### UI Canvas (Screen Space - Overlay)
+9. Canvas
+   - Add Component: Canvas
+   - Render Mode: Screen Space - Overlay
+   - Canvas Scaler: Scale with Screen Size (Reference: 1080x1920)
+
+   Children:
+   a. HUD (Top of screen)
+      - MoneyText (TextMeshPro)
+      - DayText (TextMeshPro)
+      - TimeText (TextMeshPro)
+      - ReputationText (TextMeshPro)
+      - ReputationBar (Slider/Image)
+
+   b. ShopPanel
+      - Item display grid
+      - Price setting controls
+      - Customer queue area
+
+   c. MarketDashboardPanel (Initially inactive)
+      - Market item cards container
+      - Price charts
+      - Market summary text
+
+   d. InventoryPanel (Initially inactive)
+      - Inventory grid
+      - Buy wholesale button
+      - Item details
+
+   e. NavigationBar (Bottom of screen)
+      - Shop Button
+      - Market Button
+      - Inventory Button
+      - Settings Button
+
+   f. NotificationContainer
+      - Vertical layout group for notifications
+
+### Camera
+10. Main Camera
+    - Clear Flags: Solid Color
+    - Background: #F5F5DC (warm beige - market theme)
+    - Projection: Orthographic
+    - Size: 5
+
+### Lighting
+11. Directional Light
+    - Rotation: (50, -30, 0) for pleasant shadows
+
+## Prefabs to Create
+
+### CustomerCard Prefab
+- Background image
+- Customer portrait
+- Name text
+- Budget indicator
+- Shopping list icons
+- Mood indicator
+
+### NotificationPrefab
+- Background panel with rounded corners
+- Icon image
+- Message text
+- Fade-in/fade-out animation
+
+### MarketItemCard Prefab
+- Item icon
+- Item name
+- Current price
+- Market condition indicator
+- Supply/demand bars
+- Click handler to view details
+
+## Scene Flow
+1. Scene loads
+2. Core managers initialize
+3. Market economy sets up initial prices
+4. Tutorial manager starts if first time
+5. Customer spawner begins spawning NPCs
+6. Player can interact with UI
+
+## Testing the Scene
+- Hit Play in Unity Editor
+- Check Console for initialization logs
+- Verify UI displays correctly
+- Test customer spawning
+- Try buying and selling items
+- Observe market price changes
