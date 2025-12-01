@@ -47,23 +47,32 @@ cd the-invisible-hand
 # Open with Unity 2022.3 LTS
 ```
 
-### Step 2: Configure iOS Settings
+### Step 2: Configure iOS Settings (Automated!)
 
 **In Unity Editor:**
 
-1. **File → Build Settings**
+1. **Switch to iOS Platform**
+   - File → Build Settings
    - Platform: iOS
    - Click "Switch Platform" (wait 2-5 min)
 
-2. **Player Settings** (click button in Build Settings)
-   - Bundle Identifier: `com.YOUR_NAME.theinvisiblehand`
-     ⚠️ Must be unique! Use your name/company
-   - Version: 0.1.0
-   - Build: 1
+2. **Auto-Configure Settings (One Click!)**
+   - Unity Menu: **Build → Configure for Development**
+   - This automatically sets:
+     - Bundle Identifier: `com.invisiblehandgames.theinvisiblehand`
+     - iOS version: 13.0 minimum
+     - Architecture: ARM64
+     - Scripting Backend: IL2CPP
+     - Development mode: Enabled
 
-3. **Use Build Menu (Easy Way)**
-   - **Build → Configure for Development**
-   - **Build → Show Current Settings** (verify)
+3. **Verify Settings (Optional)**
+   - Unity Menu: **Build → Show Current Settings**
+   - Check console for current configuration
+
+4. **Customize Bundle ID (If Needed)**
+   - Edit → Project Settings → Player → iOS tab
+   - Bundle Identifier: `com.YOUR_NAME.theinvisiblehand`
+   - ⚠️ Must be unique if publishing to App Store!
 
 ### Step 3: Build for iOS
 
