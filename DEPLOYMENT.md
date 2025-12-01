@@ -72,9 +72,29 @@ Unity will auto-install these when you open the project.
 
 ## 🛠️ Unity Project Configuration
 
-### 1. iOS Player Settings
+### Automated Build Tools (Recommended)
 
-**File → Build Settings → iOS → Player Settings**
+The project includes automated build scripts in `Assets/Scripts/Editor/BuildAutomation.cs` that simplify the build process:
+
+**Available Build Menu Commands:**
+- **Build → Configure for Development** - Auto-configure all iOS settings
+- **Build → Configure for Release** - Optimize for production
+- **Build → iOS Development Build** - Build with debugging enabled
+- **Build → iOS Release Build** - Build optimized for App Store
+- **Build → Increment Build Number** - Auto-increment for updates
+- **Build → Show Current Settings** - Display current configuration
+
+**Quick Workflow:**
+```
+1. Build → Configure for Development
+2. Build → iOS Development Build
+3. Opens Xcode project automatically
+4. Deploy to device
+```
+
+### 1. iOS Player Settings (Manual Configuration)
+
+**Alternative: Manual Setup via File → Build Settings → iOS → Player Settings**
 
 **Company Details:**
 ```

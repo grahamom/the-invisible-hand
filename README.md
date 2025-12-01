@@ -141,14 +141,17 @@ perceivedValue = baseValue × priceRatio × preference × urgency × mood
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/the-invisible-hand.git
+   git clone https://github.com/grahamom/the-invisible-hand.git
+   cd the-invisible-hand
    ```
 
 2. Open Unity Hub
 
-3. Add project: `the-invisible-hand`
+3. Add project: Click "Add" → Select `the-invisible-hand` folder
 
-4. Open with Unity 2022.3.10f1 (or compatible version)
+4. Open with Unity 2022.3 LTS (or compatible version)
+
+**Note:** Unity will automatically install required packages from `Packages/manifest.json` on first open.
 
 ### Setting Up the Scene
 
@@ -179,7 +182,35 @@ Customer spawned: Jordan Smith (SmartShopper)
 
 ## 📱 Building for iOS
 
-### Configure iOS Settings
+### Quick Build (Using Build Automation)
+
+The project includes automated build tools for faster deployment:
+
+1. **First Time Setup**
+   - Unity Menu: **Build → Configure for Development**
+   - This sets up all iOS settings automatically
+
+2. **Build the Project**
+   - Unity Menu: **Build → iOS Development Build**
+   - Or for release: **Build → iOS Release Build**
+   - Opens Xcode project automatically
+
+3. **Deploy to Device**
+   - Open the generated Xcode project (in `Builds/iOS/`)
+   - Connect iOS device via USB
+   - Select device in Xcode
+   - Set signing team (first time only)
+   - Click ▶️ Run
+
+4. **Increment Version** (for TestFlight updates)
+   - Unity Menu: **Build → Increment Build Number**
+   - Then rebuild
+
+See **DEPLOYMENT.md** for detailed iOS deployment instructions and **QUICK_START.md** for a 30-minute quick start guide.
+
+### Manual Configuration (Alternative)
+
+If you prefer manual setup:
 
 1. **File → Build Settings**
    - Platform: iOS
@@ -203,14 +234,6 @@ Customer spawned: Jordan Smith (SmartShopper)
    - File → Build Settings → Build
    - Choose output folder: `Builds/iOS/`
    - Unity generates Xcode project
-
-### Deploy to Device
-
-1. Open generated Xcode project
-2. Connect iOS device
-3. Select device in Xcode
-4. Set signing team
-5. Build and Run
 
 ## 🎯 Game Design Philosophy
 
@@ -351,14 +374,45 @@ Current implementation is code-focused. To make it production-ready:
 - Smooth UI transitions
 - Haptic feedback (iOS)
 
+## 🚀 Current Status & Next Actions
+
+### ✅ Completed (v0.1)
+- [x] Core economic simulation engine
+- [x] Customer AI with multiple archetypes
+- [x] Market dynamics and supply/demand
+- [x] Reputation and progression systems
+- [x] iOS build configuration
+- [x] Automated build tools
+- [x] Comprehensive documentation
+
+### 🎯 Immediate Next Steps
+
+**For Development:**
+1. **Set up Unity Scene** - Follow `Assets/Scenes/MainScene.txt` to create the game scene
+2. **Implement UI** - Create UI elements for shop, market dashboard, and inventory
+3. **Add Visual Assets** - Create sprites for items, customers, and UI elements
+4. **Test on Device** - Use **Build → iOS Development Build** to test on iPhone/iPad
+5. **Balance Gameplay** - Adjust parameters based on playtesting
+
+**For Testing:**
+1. **Quick Start** - Follow `QUICK_START.md` for 30-minute deployment guide
+2. **Set up TestFlight** - See `DEPLOYMENT.md` for beta distribution
+3. **Gather Feedback** - Test with target audience (ages 16-21)
+
+**For Contributors:**
+- See `CLAUDE.md` for AI assistant development guide
+- Check `GAME_DESIGN.md` for design philosophy and systems
+- Review open issues for contribution opportunities
+
 ## 🚧 Roadmap
 
 ### Version 0.2 - Polish
 - [ ] Complete UI implementation
-- [ ] Add visual assets
+- [ ] Add visual assets (sprites, icons, backgrounds)
 - [ ] Sound effects and music
 - [ ] Save/load system
 - [ ] Balance pass based on playtesting
+- [ ] Performance optimization
 
 ### Version 0.3 - Content
 - [ ] More items (20+ total)
@@ -366,6 +420,7 @@ Current implementation is code-focused. To make it production-ready:
 - [ ] More customer types
 - [ ] Seasonal mechanics
 - [ ] Competitor shops (AI merchants)
+- [ ] Additional tutorial steps
 
 ### Version 0.4 - Advanced Economics
 - [ ] Futures/speculation mechanics
@@ -373,14 +428,16 @@ Current implementation is code-focused. To make it production-ready:
 - [ ] Market manipulation detection
 - [ ] Economic crises (inflation, recession)
 - [ ] Advanced charts and analytics
+- [ ] Market trends and forecasting
 
 ### Version 1.0 - Release
-- [ ] Full tutorial
-- [ ] 50+ items
+- [ ] Full tutorial and onboarding
+- [ ] 50+ items across multiple categories
 - [ ] Story mode with progression
 - [ ] Endless mode
-- [ ] Leaderboards
-- [ ] Achievements integration (Game Center)
+- [ ] Leaderboards (Game Center)
+- [ ] Achievements integration
+- [ ] Localization (ES, ZH, FR)
 
 ## 📖 Educational Use
 
